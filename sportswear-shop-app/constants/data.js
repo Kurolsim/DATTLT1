@@ -23,7 +23,7 @@ export const latestList = [
       name: "Space Hippi",
       category: "Women's light support",
       oldPrice: 130,
-      price: 130
+      price: 90
     }
   ]
 export const shoesList1 = [
@@ -33,30 +33,30 @@ export const shoesList1 = [
       name: "AF1",
             category: "Nike",
             oldPrice: 110,
-            price: 110
+            price: 50
     },
     {
       id: "2",
       shoes: images.shoes2,
       name: "NMD",
             category: "Adidas",
-            oldPrice: 110,
-            price: 110
+            oldPrice: 220,
+            price: 100
     },
     {
       id: "3",
       shoes: images.shoes3,
       name: "Rebound JOY",
             category: "Puma",
-            oldPrice: 110,
-            price: 110
+            oldPrice: 1510,
+            price: 650
     },
     {
       id: "4",
       shoes: images.shoes4,
       name: "Son Tung",
             category: "Biti's Hunter",
-            oldPrice: 110,
+            oldPrice: 300,
             price: 110
     }
   ]
@@ -67,15 +67,15 @@ export const hatList1 = [
         name: "MLB",
               category: "Baseball caps",
               oldPrice: 110,
-              price: 110
+              price: 20
       },
       {
         id: "2",
         hats : images.hat2,
         name: "NMD",
               category: "Bucket",
-              oldPrice: 110,
-              price: 110
+              oldPrice: 59,
+              price: 10
       },
       {
         id: "3",
@@ -90,7 +90,7 @@ export const hatList1 = [
         hats : images.hat4,
         name: "Son Tung",
               category: "Tennis hat",
-              oldPrice: 110,
-              price: 110
+              oldPrice: 200,
+              price: 200
       }
     ]

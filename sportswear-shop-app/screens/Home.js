@@ -269,7 +269,8 @@ const Home = ({ navigation }) => {
                   renderItem={
                     ({ item, index })=>(
                         <View style={{
-                            marginRight: SIZES.padding
+                            marginRight: SIZES.padding,
+                            marginBottom: 200,
                         }}>
                             <TouchableOpacity
                              onPress={()=>navigation.navigate("Details")}
