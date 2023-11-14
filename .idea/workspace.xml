@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="594ee84a-715e-4e21-a081-8ffda7188dba" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login-register-ui/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/login-register-ui/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/constants/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/constants/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,17 +30,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "D:/react-native-ui-master/sportswear-shop-app/screens",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\react-native-ui-master\sportswear-shop-app\screens" />
+      <recent name="D:\react-native-ui-master\sportswear-shop-app\assets\images" />
+      <recent name="D:\react-native-ui-master\sportswear-shop-app" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

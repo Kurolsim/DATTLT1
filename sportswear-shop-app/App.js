@@ -1,15 +1,15 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Login, Home } from "./screens"
+import BottomTabNavigation from "./navigations/BottomTabNavigation";
+import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
-import { Details } from "./screens"
-import { useCallback } from "react";
-import BottomTabNavigation from "./navigations/BottomTabNavigation";
 
-const Stack = createNativeStackNavigator()
+
+const Stack = createNativeStackNavigator();
 export default function App() {
-
-  const [fontsLoaded] = useFonts({
+const [fontsLoaded] = useFonts({
     black: require("./assets/fonts/Inter-Black.ttf"),
     bold: require("./assets/fonts/Inter-Bold.ttf"),
     regular: require("./assets/fonts/Inter-Regular.ttf"),
@@ -25,25 +25,26 @@ export default function App() {
   if (!fontsLoaded) {
     return null
   }
-  return (
-    <NavigationContainer onReady={onLayoutRootView}>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="BottomTabNavigation"
-          component={BottomTabNavigation}
-          options={{
-            headerShown: false
-          }}
-        />
-        <Stack.Screen
-          name="Details"
-          component={Details}
-          options={{
-            headerShown: false
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+  return(
+    <NavigationContainer>
+          <Stack.Navigator initialRouteName='Welcome' onReady={onLayoutRootView}>
+          <Stack.Screen
+                    name="Login"
+                    component={Login}
+                    options={{
+                      headerShown: false
+                    }}
+                  />
+                      <Stack.Screen
+                      name="BottomTabNavigation"
+                 component={BottomTabNavigation}
+                                        options={{
+                                          headerShown: false
+                                        }}
+                                      />
+          </Stack.Navigator>
+        </NavigationContainer>
+
   );
 }
 
