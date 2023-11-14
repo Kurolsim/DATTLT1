@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login, Home } from "./screens"
+import { Login, Details } from "./screens"
 import BottomTabNavigation from "./navigations/BottomTabNavigation";
 import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
@@ -42,6 +42,13 @@ const [fontsLoaded] = useFonts({
                                           headerShown: false
                                         }}
                                       />
+                                      <Stack.Screen
+                                                          name="Details"
+                                                          component={Details}
+                                                          options={{
+                                                            headerShown: false
+                                                          }}
+                                                        />
           </Stack.Navigator>
         </NavigationContainer>
 
