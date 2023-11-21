@@ -1,14 +1,20 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, FONTS, SIZES, images } from '../constants'
 import { MaterialIcons, Ionicons, Feather } from "@expo/vector-icons"
-
-const Details = ({ navigation }) => {
+import Home from './Home'
+const Details = (props) => {
     const [isFavourite,setIsFavourite] = useState(false);
     const [selectedSize, setSelectedSize] = useState(null);
     const [quantity,setQuantity] = useState(1);
 
+    const {navigation} = props;
+    const data = navigation.getParam('data', '');
+    const handlePress =() =>{
+      console.log(data);
+      props.navigation.navigate('Cart',{data:data});
+    }
     const handleSizeSelection = (size)=>{
         setSelectedSize(size);
     }
@@ -61,11 +67,16 @@ const Details = ({ navigation }) => {
                    }
                 </TouchableOpacity>
             </View>
-
-            <Image
+            <ScrollView>
+            <Home 
+                dataProd={data}
+              />
+            </ScrollView>
+              
+            {/* <Image
               source={images.shirtDetails}
               resizeMode='cover'
-            />
+            /> */}
 
              <View style={{
                 backgroundColor: COLORS.white,

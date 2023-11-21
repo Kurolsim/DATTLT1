@@ -1,11 +1,34 @@
 import { View, Text, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, images, SIZES, FONTS } from '../constants'
 import { Feather } from "@expo/vector-icons"
 import { latestList, shoesList1, hatList1 } from '../constants/data'
+import {firebase} from '../config';
+import {useNavigation, StackActions} from '@react-navigation/native';
 
-const Home = ({ navigation }) => {
+const Home = () => {
+    const [name, setName] = useState('');
+    const navigation = useNavigation();
+        useEffect(() =>{
+            firebase.firestore().collection('users')
+            .doc(firebase.auth().currentUser.uid).get()
+            .then((snapshot)=>{ 
+                if(snapshot.exists){ 
+                    setName(snapshot.data()) 
+                    console.log('User exits')
+                    console.log('Snapshot data:', snapshot.data());
+                }
+                else {
+                    console.log('User does not exits')
+                    console.log('Snapshot data:', snapshot.data());
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching user data:', error);
+              });
+
+        }, [])
   return (
    <SafeAreaView style={{
     flex: 1,
@@ -28,7 +51,23 @@ const Home = ({ navigation }) => {
                     }}>Hello, Welcome</Text>
                 <Text style={{
                     ...FONTS.h3,
-                     }}>Albert Stevano</Text>
+                     }}>{name.firstName}</Text>
+                             <TouchableOpacity
+                onPress={() => {firebase.auth().signOut()}}
+                style={{
+                    marginTop:10,
+                    height:50,
+                    width:90,
+                    backgroundColor:'#026efd',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    borderRadius:50,
+                }}
+            >
+                <Text style={{fontSize:22, fontWeight:'bold'}}>
+                    Sign out
+                </Text>
+            </TouchableOpacity>
         </View>
 
             <View>
@@ -130,7 +169,7 @@ const Home = ({ navigation }) => {
                             marginRight: SIZES.padding
                         }}>
                             <TouchableOpacity
-                             onPress={()=>navigation.navigate("Details")}
+                             onPress={()=> navigation.navigate('Details')}
                             >
                                 <Image
                                  source={item.image}
@@ -142,7 +181,7 @@ const Home = ({ navigation }) => {
                             </TouchableOpacity>
 
                             <TouchableOpacity
-                              onPress={()=>navigation.navigate("Details")}
+                              onPress={()=>navigation.navigate('Details')}
                             >
                                 <Text style={{
                                     fontSize: 14,
@@ -333,6 +372,7 @@ const Home = ({ navigation }) => {
             </View>
         </ScrollView>
      </View>
+     
    </SafeAreaView>
   )
 }

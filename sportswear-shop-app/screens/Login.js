@@ -5,10 +5,30 @@ import COLORS from '../constants/theme';
 import { Ionicons } from "@expo/vector-icons";
 import Button from '../components/Button';
 import BottomTabNavigation from "../navigations/BottomTabNavigation";
-const Login = ({ navigation }) => {
+import {firebase} from '../config';
+import {useNavigation, StackActions} from '@react-navigation/native';
+const Login = () => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-    
+    // new code
+    const navigation = useNavigation();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    loginUser = async (email, password) => {
+        try {
+            await firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+                navigation.navigate('Home')
+            })
+           
+        } catch (error) {
+            alert(error.message)
+        }
+        console.log('Hello');
+        // navigation.navigate('Dashboard')
+    }
+    // new code
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
             <View style={{ flex: 1, marginHorizontal: 22 }}>
@@ -48,6 +68,7 @@ const Login = ({ navigation }) => {
                         <TextInput
                             placeholder='Enter your email address'
                             placeholderTextColor={COLORS.black}
+                            onChangeText={(email)=> setEmail(email)}
                             keyboardType='email-address'
                             style={{
                                 width: "100%"
@@ -76,6 +97,7 @@ const Login = ({ navigation }) => {
                         <TextInput
                             placeholder='Enter your password'
                             placeholderTextColor={COLORS.black}
+                            onChangeText={(password)=> setPassword(password)}
                             secureTextEntry={isPasswordShown}
                             style={{
                                 width: "100%"
@@ -106,16 +128,13 @@ const Login = ({ navigation }) => {
                     marginVertical: 6
                 }}>
                 </View>
-
-                <Button
-                    title="Login"
-                    filled
-                    style={{
-                        marginTop: 18,
-                        marginBottom: 4,
-                    }}
-                />
-
+                {/* New code */}
+                <TouchableOpacity
+                    onPress={() => loginUser(email, password)}
+                >
+                    <Text>Login</Text>
+                </TouchableOpacity>
+                {/* New code */}
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 20 }}>
                     <View
                         style={{
