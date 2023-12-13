@@ -28,6 +28,7 @@ const Login = () => {
         console.log('Hello');
         // navigation.navigate('Dashboard')
     }
+    
     // new code
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>

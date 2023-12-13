@@ -1,11 +1,19 @@
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useRoute } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login, Details, Signup, Home } from "./screens"
+import { Login, Details, Signup, Home} from "./screens";
+import OrderPage from "./screens/OrderPage";
+import CartScreen from "./screens/CartScreen";
 import BottomTabNavigation from "./navigations/BottomTabNavigation";
-import React, {useState, useEffect, useCallback } from "react";
+import ProductNavigator from "./navigations/ProductNavigator";
+import React, { useState, useEffect, useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
-import {firebase} from './config';
+import { firebase } from "./config";
+import { Provider } from "react-redux";
+import store from "./store";
+
+
+
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -13,91 +21,127 @@ function App() {
     black: require("./assets/fonts/Inter-Black.ttf"),
     bold: require("./assets/fonts/Inter-Bold.ttf"),
     regular: require("./assets/fonts/Inter-Regular.ttf"),
-    medium: require("./assets/fonts/Inter-Medium.ttf")
+    medium: require("./assets/fonts/Inter-Medium.ttf"),
   });
-// new codde
-const [initializing, setInitializing] = useState(true);
-const [user, setUser] = useState();
+  // new codde
+  const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState();
 
-// Handle user state changes
-function onAuthStateChanged(user) {
-  setUser(user);
-  if(initializing) setInitializing(false);
-}
+  // const route = useRoute();
+  // const item = route.params;
 
-useEffect(() => {
-  const subscriber = firebase.auth().onAuthStateChanged(onAuthStateChanged);
-  return subscriber;
-}, []);
-
-const onLayoutRootView = useCallback(async () => {
-  if (fontsLoaded) {
-    await SplashScreen.hideAsync()
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    setUser(user);
+    if (initializing) setInitializing(false);
   }
-}, [fontsLoaded]);
 
-if (!fontsLoaded) {
-  return null
-}
-if(initializing) return null;
+  useEffect(() => {
+    const subscriber = firebase.auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber;
+  }, []);
 
-// new code 
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
-  if(!user)
-  {
-    return(
+  if (!fontsLoaded) {
+    return null;
+  }
+  if (initializing) return null;
+
+  // new code
+
+  if (!user) {
+    return (
       // <NavigationContainer>
-            <Stack.Navigator initialRouteName='Welcome' onReady={onLayoutRootView}>
-            <Stack.Screen
-                      name="Login"
-                      component={Login}
-                      options={{
-                        headerShown: false
-                      }}
-                    />
-                        <Stack.Screen
-                        name="BottomTabNavigation"
-                  component={BottomTabNavigation}
-                                          options={{
-                                            headerShown: false
-                                          }}
-                                        />
-                                
-                                                          <Stack.Screen
-                                                            name="Signup"
-                                                            component={Signup}
-                                                            options={{
-                                                              headerShown: false
-                                                            }}
-                                                          />
-                                                         
-            </Stack.Navigator>
-          // </NavigationContainer>
+      <Stack.Navigator initialRouteName="Welcome" onReady={onLayoutRootView}>
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="BottomTabNavigation"
+          component={BottomTabNavigation}
+          options={{
+            headerShown: false,
+          }}
+        />
 
-    );
-                                                        }
-                                                        return (
-                                                          <Stack.Navigator>
-                                                            <Stack.Screen 
-                                                                name='Home'
-                                                                component={Home}
-                                                              />
-                                                              <Stack.Screen
-                                                            name="Details"
-                                                            component={Details}
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
+          options={{
+            headerShown: false,
+          }}
+        />
+        {/* <Stack.Screen
+                                                            name="Home"
+                                                            component={Home}
                                                             options={{
                                                               headerShown: false
                                                             }}
-                                                          />
-                                                          </Stack.Navigator>
-                                                        );
+                                                          /> */}
+       
+        
+        
+      </Stack.Navigator>
+      // </NavigationContainer>
+    );
+  }
+  return (
+    <Stack.Navigator>
+      <Stack.Screen 
+          name='Home'
+          component={Home}
+        />
+        <Stack.Screen
+      name="Details"
+      component={Details}
+      options={{
+        headerShown: false
+      }}
+    />
+
+      <Stack.Screen
+      name="ProductNavigator"
+      component={ProductNavigator}
+      options={{
+        headerShown: false
+      }}
+    />
+        <Stack.Screen
+      name="OrderPage"
+      component={OrderPage}
+      options={{
+        headerShown: false
+      }}
+    />
+    <Stack.Screen
+      name="cart"
+      component={CartScreen}
+      options={{
+        headerShown: false
+      }}
+    />
+    </Stack.Navigator>
+  );
 }
 
 export default () => {
   return (
-    <NavigationContainer>
-      <App />
-    </NavigationContainer>
-  )
-}
+    <Provider store={store}>
+      <NavigationContainer>
+        <App />
+      </NavigationContainer>
+    </Provider>
 
+
+   
+  );
+};

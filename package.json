@@ -1,10 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +12,16 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "firebase": "^10.5.0",
+    "firebase": "^10.6.0",
     "firebase-admin": "^11.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kurolsim/DATTLT1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kurolsim/DATTLT1/issues"
+  },
+  "homepage": "https://github.com/Kurolsim/DATTLT1#readme",
+  "description": ""
 }

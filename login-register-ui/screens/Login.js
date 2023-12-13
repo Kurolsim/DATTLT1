@@ -5,11 +5,29 @@ import COLORS from '../constants/colors';
 import { Ionicons } from "@expo/vector-icons";
 import Checkbox from "expo-checkbox"
 import Button from '../components/Button';
+import {getAuth, FacebookAuthProvider, signInWithCredential} from 'firebase/auth';
+import 'expo-dev-client';
+import {LoginManager, AccessToken} from 'react-native-fbsdk-next' 
+
 
 const Login = ({ navigation }) => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-    
+    const signInWithFB = async () => {
+        try {
+          await LoginManager.logInWithPermissions(['public_profile', 'email']);
+          const data = await AccessToken.getCurrentAccessToken();
+          if(!data) {
+            return;
+          }
+          const facebookCredential = FacebookAuthProvider.credential(data.accessToken);
+          const auth = getAuth();
+          const response = await signInWithCredential(auth, facebookCredential);
+          console.log(response);
+        }catch (e) {
+          console.log(e);
+        }
+      }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
             <View style={{ flex: 1, marginHorizontal: 22 }}>
@@ -150,7 +168,7 @@ const Login = ({ navigation }) => {
                     justifyContent: 'center'
                 }}>
                     <TouchableOpacity
-                        onPress={() => console.log("Pressed")}
+                        onPress={(signInWithFB)}
                         style={{
                             flex: 1,
                             alignItems: 'center',

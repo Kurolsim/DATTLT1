@@ -2,6 +2,16 @@
   "expo": {
     "name": "login-register-ui",
     "slug": "login-register-ui",
+    "plugins": [
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "1087326892274481",
+          "clientToken": "740750721e96a28ada8f39607c02ab1d",
+          "displayName": "ExpoFirebase"
+        }
+      ]
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
