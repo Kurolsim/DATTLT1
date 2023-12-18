@@ -5,6 +5,8 @@ import Details from "./screens/Details.js";
 import Signup from "./screens/Signup.js";
 import Home from "./screens/Home.js";
 import OrderPage from "./screens/OrderPage";
+import Profile from "./screens/Profile";
+import EditProfile from "./screens/EditProfile";
 import BottomTabNavigation from "./navigations/BottomTabNavigation";
 import ProductNavigator from "./navigations/ProductNavigator";
 import React, { useState, useEffect, useCallback } from "react";
@@ -90,6 +92,13 @@ function App() {
         headerShown: false
       }}
     />
+    <Stack.Screen
+              name="Profile"
+              component={Profile}
+              options={{
+                headerShown: false
+              }}
+            />
       <Stack.Screen
       name="ProductNavigator"
       component={ProductNavigator}
@@ -104,6 +113,13 @@ function App() {
         headerShown: false
       }}
     />
+    <Stack.Screen
+         name="EditProfile"
+         component={EditProfile}
+         options={{
+         headerShown: false
+         }}
+         />
     </Stack.Navigator>
   );
 }

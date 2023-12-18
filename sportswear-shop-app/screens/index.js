@@ -5,6 +5,8 @@ import Search from "./Search";
 import Details from "./Details";
 import Signup from './Signup';
 import Login from "./Login";
+import EditProfile from "./EditProfile";
+import Settings from "./Settings";
 export {
     Login,
     Home,
@@ -12,5 +14,7 @@ export {
     Favourite,
     Search,
     Details,
-    Signup
+    Signup,
+    EditProfile,
+    Settings
 }

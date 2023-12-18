@@ -3,8 +3,8 @@ import { MaterialCommunityIcons, Ionicons, AntDesign } from "@expo/vector-icons"
 import { COLORS } from "../constants";
 import CartScreen from "../screens/CartScreen.js";
 import Home from "../screens/Home.js";
-import Profile from "../screens/Profile.js";
 import Search from "../screens/Search.js";
+import Settings from "../screens/Settings";
 
 const Tab = createBottomTabNavigator();
 
@@ -79,8 +79,8 @@ const BottomTabNavigation = () => {
         />
 
 <Tab.Screen
-           name="Profile"
-           component={Profile}
+           name="Settings"
+           component={Settings}
            options={{
             tabBarIcon: ({ focused })=>{
                 return (

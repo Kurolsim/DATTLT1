@@ -6,19 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="594ee84a-715e-4e21-a081-8ffda7188dba" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sportswear-shop-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sportswear-shop-app/navigations/BottomTabNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/navigations/BottomTabNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/CartScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Favourite.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Favourite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/OrderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +50,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/react-native-ui-master",
+    "last_opened_file_path": "D:/react-native-ui-master/sportswear-shop-app/screens",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "show.migrate.to.gradle.popup": "false"
   }
@@ -108,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702875287174</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1702913595009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702913595009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

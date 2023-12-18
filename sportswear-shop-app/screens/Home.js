@@ -171,33 +171,20 @@ const Home = () => {
               }}
             >
               {name.username}
-              <TouchableOpacity
-                onPress={() => { firebase.auth().signOut() }}
-                style={{
-                  marginTop: 10,
-                  height: 50,
-                  width: 90,
-                  backgroundColor: '#026efd',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 50,
-                }}
-              >
-                <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
-                  Sign out
-                </Text>
-              </TouchableOpacity>
             </Text>
           </View>
 
           <View>
-            <Image
-              source={images.avatar}
-              style={{
-                height: 50,
-                width: 50,
-              }}
-            />
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+                          <Image
+                                source={images.avatar}
+                                      style={{
+                                          height: 50,
+                                          width: 50,
+                                        }}
+                                      />
+                      </TouchableOpacity>
+
           </View>
         </View>
 
