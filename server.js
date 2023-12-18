@@ -10,7 +10,7 @@
 
 // //Firebase
 // const { db } = require('./config/admin');
-// //showwn het cac product
+// //show het cac product
 // app.get("/shown", async (req, res) => {
 //   const cRef = db.collection('product');
 //   try {

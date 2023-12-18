@@ -1,8 +1,10 @@
 import { NavigationContainer, useRoute } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login, Details, Signup, Home} from "./screens";
+import Login from "./screens/Login.js";
+import Details from "./screens/Details.js";
+import Signup from "./screens/Signup.js";
+import Home from "./screens/Home.js";
 import OrderPage from "./screens/OrderPage";
-import CartScreen from "./screens/CartScreen";
 import BottomTabNavigation from "./navigations/BottomTabNavigation";
 import ProductNavigator from "./navigations/ProductNavigator";
 import React, { useState, useEffect, useCallback } from "react";
@@ -13,8 +15,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 
-
-
 const Stack = createNativeStackNavigator();
 function App() {
   const [fontsLoaded] = useFonts({
@@ -23,7 +23,7 @@ function App() {
     regular: require("./assets/fonts/Inter-Regular.ttf"),
     medium: require("./assets/fonts/Inter-Medium.ttf"),
   });
-  // new codde
+  // new code
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
 
@@ -56,7 +56,6 @@ function App() {
 
   if (!user) {
     return (
-      // <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome" onReady={onLayoutRootView}>
         <Stack.Screen
           name="Login"
@@ -66,40 +65,24 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="BottomTabNavigation"
-          component={BottomTabNavigation}
-          options={{
-            headerShown: false,
-          }}
-        />
-
-        <Stack.Screen
           name="Signup"
           component={Signup}
           options={{
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen
-                                                            name="Home"
-                                                            component={Home}
-                                                            options={{
-                                                              headerShown: false
-                                                            }}
-                                                          /> */}
-       
-        
-        
       </Stack.Navigator>
-      // </NavigationContainer>
     );
   }
   return (
     <Stack.Navigator>
-      <Stack.Screen 
-          name='Home'
-          component={Home}
-        />
+     <Stack.Screen
+              name="BottomTabNavigation"
+              component={BottomTabNavigation}
+              options={{
+                headerShown: false,
+              }}
+            />
         <Stack.Screen
       name="Details"
       component={Details}
@@ -107,7 +90,6 @@ function App() {
         headerShown: false
       }}
     />
-
       <Stack.Screen
       name="ProductNavigator"
       component={ProductNavigator}
@@ -122,13 +104,6 @@ function App() {
         headerShown: false
       }}
     />
-    <Stack.Screen
-      name="cart"
-      component={CartScreen}
-      options={{
-        headerShown: false
-      }}
-    />
     </Stack.Navigator>
   );
 }
@@ -137,11 +112,8 @@ export default () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <App />
+        <App/>
       </NavigationContainer>
     </Provider>
-
-
-   
   );
 };

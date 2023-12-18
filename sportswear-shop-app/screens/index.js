@@ -12,5 +12,5 @@ export {
     Favourite,
     Search,
     Details,
-    Signup,
+    Signup
 }

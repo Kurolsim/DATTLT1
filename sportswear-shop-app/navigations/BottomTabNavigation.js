@@ -1,7 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Ionicons, AntDesign } from "@expo/vector-icons";
 import { COLORS } from "../constants";
-import { Favourite, Home, Profile, Search } from "../screens";
+import CartScreen from "../screens/CartScreen.js";
+import Home from "../screens/Home.js";
+import Profile from "../screens/Profile.js";
+import Search from "../screens/Search.js";
 
 const Tab = createBottomTabNavigator();
 
@@ -62,16 +65,14 @@ const BottomTabNavigation = () => {
         />
 
 <Tab.Screen
-           name="Favourite"
-           component={Favourite}
+           name="cart"
+           component={CartScreen}
            options={{
             tabBarIcon: ({ focused })=>{
                 return (
-                    <Ionicons
-                      name={focused ? "heart" : "heart-outline"}
-                      size={24}
-                      color={COLORS.white}
-                    />
+                    <AntDesign name="shoppingcart"
+                    size={24}
+                    color="black" />
                 )
             }
            }}

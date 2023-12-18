@@ -26,6 +26,6 @@ const OrderPage = () => {
     )
 }
 
-export default OrderPage
+export default OrderPage;
 
 const styles = StyleSheet.create({})
