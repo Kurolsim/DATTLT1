@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594ee84a-715e-4e21-a081-8ffda7188dba" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sportswear-shop-app/navigations/BottomTabNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/navigations/BottomTabNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702913595009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1702916543619</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702916543619</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <created>1702916554091</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702916554091</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

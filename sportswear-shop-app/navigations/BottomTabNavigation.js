@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons, Ionicons, AntDesign } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants";
 import CartScreen from "../screens/CartScreen.js";
 import Home from "../screens/Home.js";
@@ -70,9 +70,10 @@ const BottomTabNavigation = () => {
            options={{
             tabBarIcon: ({ focused })=>{
                 return (
-                    <AntDesign name="shoppingcart"
+                    <Ionicons
+                    name={focused ? "cart" : "cart-outline"}
                     size={24}
-                    color="black" />
+                    color={COLORS.white}/>
                 )
             }
            }}
