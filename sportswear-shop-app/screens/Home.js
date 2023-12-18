@@ -170,7 +170,7 @@ const Home = () => {
                 ...FONTS.h3,
               }}
             >
-              {name.firstName}
+              {name.username}
               <TouchableOpacity
                 onPress={() => { firebase.auth().signOut() }}
                 style={{
