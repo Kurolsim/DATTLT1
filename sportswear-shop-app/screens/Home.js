@@ -557,9 +557,6 @@ const Home = () => {
               <TouchableOpacity style={styles.button} onPress={addProduct}>
                 <Text style={styles.buttonText}>Add</Text>
               </TouchableOpacity> */}
-              <TouchableOpacity onPress={() => navigation.navigate('cart')}>
-                <Text>View Cart</Text>
-              </TouchableOpacity>
             </View>
 
             <FlatList

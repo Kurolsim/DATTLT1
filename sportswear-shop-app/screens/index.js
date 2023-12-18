@@ -7,6 +7,7 @@ import Signup from './Signup';
 import Login from "./Login";
 import EditProfile from "./EditProfile";
 import Settings from "./Settings";
+import SearchFilter from "./SearchFilter";
 export {
     Login,
     Home,
@@ -16,5 +17,6 @@ export {
     Details,
     Signup,
     EditProfile,
-    Settings
+    Settings,
+    SearchFilter
 }
