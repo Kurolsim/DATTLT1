@@ -3,6 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS, FONTS } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
+import { firebase } from "../config";
 
 const Settings = ({ navigation }) => {
   const navigateToEditProfile = () => {
@@ -51,6 +52,7 @@ const Settings = ({ navigation }) => {
 
   const logout = () => {
     console.log("Logout");
+    firebase.auth().signOut();
   };
 
   const accountItems = [

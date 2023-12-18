@@ -132,7 +132,19 @@ const Login = () => {
                 {/* New code */}
                 <TouchableOpacity
                     onPress={() => loginUser(email, password)}
+                    style={{
+                                                flex: 0.25,
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                flexDirection: 'row',
+                                                height: 10,
+                                                borderWidth: 1,
+                                                borderColor: COLORS.grey,
+                                                marginHorizontal: 70,
+                                                borderRadius: 10
+                                            }}s
                 >
+
                     <Text>Login</Text>
                 </TouchableOpacity>
                 {/* New code */}

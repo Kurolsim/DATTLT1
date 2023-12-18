@@ -46,7 +46,7 @@ const Settings = ({ navigation }) => {
   };
 
   const addAccount = () => {
-    console.log("Aadd account ");
+    console.log("Add account ");
   };
 
   const logout = () => {
