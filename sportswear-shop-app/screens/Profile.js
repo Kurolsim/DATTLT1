@@ -73,7 +73,7 @@ const Profile = () => {
 
   const fetchProfileData = async () => {
     try {
-      const docRef = doc(db, "profile", "n8k0D3XMCoeVoChEDc98"); // Thay "n8k0D3XMCoeVoChEDc98" bằng ID tài khoản cụ thể của bạn
+      const docRef = doc(db, "users", "EtPo4C0AY4ctDzcImxnSvb15Jam2"); // Thay "n8k0D3XMCoeVoChEDc98" bằng ID tài khoản cụ thể của bạn
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {

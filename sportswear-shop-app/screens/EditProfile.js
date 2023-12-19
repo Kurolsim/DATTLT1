@@ -27,7 +27,7 @@ const EditProfile = ({ navigation }) => {
 
   function Create() {
     // Gửi dữ liệu
-    updateDoc(doc(db, "profile", "n8k0D3XMCoeVoChEDc98"), {
+    updateDoc(doc(db, "users", "EtPo4C0AY4ctDzcImxnSvb15Jam2"), {
       name: name,
       email: email,
       country: country,
