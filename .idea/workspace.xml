@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594ee84a-715e-4e21-a081-8ffda7188dba" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/EditProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/EditProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sportswear-shop-app/screens/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/sportswear-shop-app/screens/CartScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/react-native-ui-master/sportswear-shop-app/screens",
+    "last_opened_file_path": "D:/Food-Recipe-App-React-Native-main",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "show.migrate.to.gradle.popup": "false"
   }
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702928249082</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <created>1702971369522</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702971369522</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
