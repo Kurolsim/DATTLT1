@@ -43,41 +43,46 @@ class ProductScreen extends Component {
   }
   render() {
     console.log('State userArr:', this.state.userArr);
-    if(this.state.isLoading){
-      return(
-        <View style={styles.preloader}>
-          <ActivityIndicator size="large" color="#9E9E9E"/>
-        </View>
+        if(this.state.isLoading){
+          return(
+            <View style={styles.preloader}>
+              <ActivityIndicator size="large" color="#9E9E9E"/>
+            </View>
       )
     }    
     return (
-      <ScrollView style={styles.container}>
-          {
-            this.state.userArr.map((item, i) => {
-              return (
-                <ListItem
-                  key={i}
-                  chevron
-                  bottomDivider
-                  title={item.name}
-                  subtitle={item.brand}
-                  onPress={() => {
-                    this.props.navigation.navigate('ProductDetailScreen', {
-                      productkey: item.key
-                    });
-                  }}/>
-                  
-              );
-            })
-          }
-      </ScrollView>
+       <ScrollView style={styles.container}>
+                {
+                  this.state.userArr.map((item, i) => {
+                    return (
+                      <ListItem
+                        key={i}
+                        chevron
+                        bottomDivider
+                        title={item.name}
+                        leftElement={<Image source={{uri: item.image}} style={styles.productImage} />}
+                        onPress={() => {
+                          this.props.navigation.navigate('ProductDetailScreen', {
+                            productkey: item.key
+                          });
+                        }}
+                      >
+                        <View style={styles.productInfo}>
+                          <Text style={styles.boldText}>{item.name}</Text>
+                          <Text>{item.brand}</Text>
+                        </View>
+                      </ListItem>
+                    );
+                  })
+                }
+            </ScrollView>
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
-   flex: 1,
-   paddingBottom: 22,
+    flex: 1,
+    paddingBottom: 22,
   },
   preloader: {
     left: 0,
@@ -87,6 +92,20 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
-  }
-})
+  },
+  productImage: {
+    width: 50,
+    height: 50,
+    resizeMode: 'cover',
+    marginRight: 10,
+    borderRadius: 5,
+  },
+  productInfo: {
+    marginLeft: 10, // Adjust the margin as needed
+  },
+  boldText: {
+      fontWeight: 'bold',
+    },
+});
+
 export default ProductScreen;

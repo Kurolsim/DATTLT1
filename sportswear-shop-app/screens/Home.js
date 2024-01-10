@@ -573,36 +573,6 @@ const Home = () => {
                 <Text style={styles.buttonText}>Add</Text>
               </TouchableOpacity> */}
             </View>
-
-            <FlatList
-              horizontal={true}
-              data={product}
-              numColumns={1}
-              renderItem={({ item }) => (
-                <View>
-                  <Pressable
-                    style={styles.container}
-                    onPress={() => navigation.navigate('Details', { item })}
-                  >
-                    <FontAwesome
-                      name='trash-o'
-                      color='red'
-                      onPress={() => deleteProduct(item)}
-                      style={styles.productIcon}
-                    />
-
-                    <View style={styles.innerContainer}>
-                      <Text style={styles.itemHeading}>
-                        {/* {item.name[0].toUpperCase() + item.name.slice(1)} */}
-                        {item.name}
-                      </Text>
-                    </View>
-                  </Pressable>
-                </View>
-              )}
-            >
-
-            </FlatList>
           </View>
         </ScrollView>
 
@@ -620,7 +590,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 15,
     margin: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -640,7 +610,7 @@ const styles = StyleSheet.create({
     height: 80,
     marginLeft: 10,
     marginRight: 10,
-    marginTop: 100
+    marginTop: 10
   },
 
   input: {
