@@ -14,7 +14,8 @@ const screenOptions={
     tabBarHideOnKeyboard: true,
     tabBarStyle:{
         position: "absolute",
-        bottom:20,
+        bottom: 20,
+        paddingBottom: 0,
         right: 30,
         left: 30,
         elevation: 0,
@@ -25,9 +26,10 @@ const screenOptions={
         shadowColor: '#000',
         shadowOpacity: 0.06,
         shadowOffset: {
-            width:10,
+            width: 10,
             height: 10
         }
+
     }
 }
 const BottomTabNavigation = () => {
@@ -41,7 +43,8 @@ const BottomTabNavigation = () => {
                 return (
                     <MaterialCommunityIcons
                       name={focused ? "home" : "home-outline"}
-                      size={24}
+                      size={30}
+                      style={{padding: 15}}
                       color={COLORS.white}
                     />
                 )
@@ -57,6 +60,7 @@ const BottomTabNavigation = () => {
                     <Ionicons
                       name="search-sharp"
                       size={24}
+                      style={{padding: 15}}
                       color={COLORS.white}
                     />
                 )
@@ -73,6 +77,7 @@ const BottomTabNavigation = () => {
                     <Ionicons
                     name={focused ? "cart" : "cart-outline"}
                     size={24}
+                    style={{padding: 15}}
                     color={COLORS.white}/>
                 )
             }
@@ -88,6 +93,7 @@ const BottomTabNavigation = () => {
                     <Ionicons
                       name={focused ? "person" : "person-outline"}
                       size={24}
+                      style={{padding: 15}}
                       color={COLORS.white}
                     />
                 )

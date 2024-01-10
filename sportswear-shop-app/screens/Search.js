@@ -1,6 +1,7 @@
 import { View, Text, Feather , StyleSheet, TextInput} from 'react-native'
 import React from 'react'
 import {useState, useEffect} from "react";
+import { COLORS, FONTS, SIZES, images } from "../constants";
 import SearchFilter from "./SearchFilter";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { firebase } from "../config";
@@ -66,5 +67,3 @@ console.log(input);
   );
 }
 export default Search;
-
-const styles = StyleSheet.create({});
