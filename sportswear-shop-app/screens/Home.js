@@ -660,6 +660,7 @@ const styles = StyleSheet.create({
     width: 80,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 35,
   },
 
   buttonText: {
