@@ -17,7 +17,7 @@ useEffect(() => {
         querySnapshot => {
           const product = [];
           querySnapshot.forEach((doc) => {
-            const { brand, category, image, name, oldPrice, price, quantity } = doc.data();
+            const { brand, category, image, name, oldPrice, price, quantity, size } = doc.data();
             product.push({
               id: doc.id,
               brand,
@@ -27,7 +27,7 @@ useEffect(() => {
               oldPrice,
               price,
               quantity,
-
+              size
 
             });
           });

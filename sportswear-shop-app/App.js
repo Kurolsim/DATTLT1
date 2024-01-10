@@ -15,7 +15,9 @@ import { useFonts } from "expo-font";
 import { firebase } from "./config";
 import { Provider } from "react-redux";
 import store from "./store";
-
+import AddProductScreen from './screens/AddProductScreen';
+import ProductScreen from './screens/ProductScreen';
+import ProductDetailScreen from './screens/ProductDetailScreen';
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -120,6 +122,21 @@ function App() {
          headerShown: false
          }}
          />
+         <Stack.Screen
+                 name="AddProductScreen"
+                 component={AddProductScreen}
+                 options={{ title: 'Add Product' }}
+               />
+               <Stack.Screen
+                 name="ProductScreen"
+                 component={ProductScreen}
+                 options={{ title: 'Product List' }}
+               />
+               <Stack.Screen
+                name="ProductDetailScreen"
+                component={ProductDetailScreen}
+                options={{ title: 'Product Detail' }}
+               />
     </Stack.Navigator>
   );
 }

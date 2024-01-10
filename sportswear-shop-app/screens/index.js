@@ -8,6 +8,9 @@ import Login from "./Login";
 import EditProfile from "./EditProfile";
 import Settings from "./Settings";
 import SearchFilter from "./SearchFilter";
+import AddProduct from "./AddProductScreen";
+import ProductDetail from "./ProductDetailScreen";
+import Product from "./ProductScreen";
 export {
     Login,
     Home,
@@ -18,5 +21,8 @@ export {
     Signup,
     EditProfile,
     Settings,
-    SearchFilter
+    SearchFilter,
+    AddProduct,
+    ProductDetail,
+    Product,
 }

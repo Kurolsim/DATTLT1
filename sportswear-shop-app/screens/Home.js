@@ -58,7 +58,7 @@ const Home = () => {
         querySnapshot => {
           const product = [];
           querySnapshot.forEach((doc) => {
-            const { brand, category, image, name, oldPrice, price, quantity } = doc.data();
+            const { brand, category, image, name, oldPrice, price, quantity, size } = doc.data();
             product.push({
               id: doc.id,
               brand,
@@ -535,6 +535,21 @@ const Home = () => {
                 </View>
               )}
             />
+            <View style={styles.container}>
+                      <Button
+                        title="Add Product"
+                        onPress={() => navigation.navigate('AddProductScreen')}
+                        color="#841584"
+                      />
+                    </View>
+
+                    <View style={styles.container}>
+                      <Button
+                        title="ProductScreen"
+                        onPress={() => navigation.navigate('ProductScreen')}
+                         color="#841584"
+                      />
+                    </View>
           </View>
           {/* <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
             <Button
@@ -644,7 +659,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#78ee',
     width: 80,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: 35,
   },
 
   buttonText: {
