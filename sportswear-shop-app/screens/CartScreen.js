@@ -39,6 +39,9 @@ const CartScreen = () => {
       <View style={styles.subtotalContainer}>
         <Text style={styles.subtotalText}>Subtotal:</Text>
         <Text style={styles.totalAmount}>${total}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('OrderPage')} style={styles.orderButton}>
+                <Text style={styles.orderButtonText}>Order Product</Text>
+              </TouchableOpacity>
       </View>
       <Text style={styles.detailText}>Detail Available</Text>
       <Pressable style={styles.buyButton}>
@@ -76,9 +79,9 @@ const CartScreen = () => {
           </View>
         ))}
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('OrderPage')} style={styles.orderButton}>
-        <Text style={styles.orderButtonText}>Order Product</Text>
-      </TouchableOpacity>
+
+
+
     </ScrollView>
   );
 };
