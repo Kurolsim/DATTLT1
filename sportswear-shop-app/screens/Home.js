@@ -385,9 +385,7 @@ const Home = () => {
                     marginRight: SIZES.padding,
                   }}
                 >
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("Details")}
-                  >
+                  <TouchableOpacity>
                     <Image
                       source={item.shoes}
                       style={{
@@ -397,9 +395,7 @@ const Home = () => {
                     />
                   </TouchableOpacity>
 
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("Details")}
-                  >
+                  <TouchableOpacity>
                     <Text
                       style={{
                         fontSize: 14,
@@ -470,9 +466,7 @@ const Home = () => {
                     marginBottom: 200,
                   }}
                 >
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("Details")}
-                  >
+                  <TouchableOpacity>
                     <Image
                       source={item.hats}
                       style={{
@@ -482,9 +476,7 @@ const Home = () => {
                     />
                   </TouchableOpacity>
 
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("Details")}
-                  >
+                  <TouchableOpacity>
                     <Text
                       style={{
                         fontSize: 14,
